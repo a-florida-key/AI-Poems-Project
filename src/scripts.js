@@ -8,5 +8,5 @@ function Poem(event) {
   });
 }
 
-letpoemFormElement = document.querySelector("poem-generator");
-poemFormElement.addEventListener("submit", getPoem);
+let poemFormElement = document.querySelector("#poem-generator");
+poemFormElement.addEventListener("submit", Poem);
