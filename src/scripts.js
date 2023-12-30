@@ -3,7 +3,7 @@ function getPoem(response) {
     strings: response.data.answer,
     autoStart: true,
     cursor: "",
-    delay: 50,
+    delay: 1,
   });
 }
 
@@ -11,7 +11,7 @@ function Poem(event) {
   event.preventDefault();
   let instructionsInput = document.querySelector("#user-instructions");
   let prompt = `Generate a poem about ${instructionsInput.value}`;
-  let context = `You are a poem AI assistant. Please provide answers that rhyme.`;
+  let context = `You are a poem AI assistant. Please provide concise answers that rhyme. Sign the poem with '- SheCodes AI' inside a <strong></strong> element at the end of the poem.`;
   let apiKey = `ceao63d7e80ab9169tc53ef7497c0dda`;
   let apiUrl = `https://api.shecodes.io/ai/v1/generate?prompt=${prompt}&context=${context}&key=${apiKey}`;
 
